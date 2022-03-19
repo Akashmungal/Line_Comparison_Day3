@@ -7,18 +7,35 @@ public class LineComparison {
 
         System.out.println("Welcome to Line Comparison Computation");
 
-            Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-            System.out.println("Line 01 :- enter X1 and Y1 value"); //enter value
-            int x1 = in.nextInt();
-            int y1 = in.nextInt();
+        System.out.println("Line 01 :- enter X1 and Y1 value");
+        int line1X1 = in.nextInt();
+        int line1Y1 = in.nextInt();
+        System.out.println("Line 01 :- enter X2 and Y2 value");
+        int line1X2 = in.nextInt();
+        int line1Y2 = in.nextInt();
 
-            System.out.println("Line 01 :- enter X2 and Y2 value");
-            int x2 = in.nextInt();
-            int y2 = in.nextInt();
+        int line1 =(int) Math.sqrt( (line1X2 - line1X1) ^ 2 + (line1Y2 - line1Y1) ^ 2 );
+        System.out.println("Line One Length Is:- " + line1);
 
-            double line1 = Math.sqrt( (x2 - x1) ^ 2 + (y2 - y1) ^ 2 );
+
+        System.out.println("Line 02 :- enter X1 and Y1 value"); //enter value
+        int line2X1 = in.nextInt();
+        int line2Y1 = in.nextInt();
+        System.out.println("Line 02 :- enter X2 and Y2 value");
+        int line2X2 = in.nextInt();
+        int line2Y2 = in.nextInt();
+
+        int line2 = (int)Math.sqrt( (line2X2 - line2X1) ^ 2 + (line2Y2 - line2Y1) ^ 2 );
+        System.out.println("Line One Length Is:- " + line1);
+
+
+        if (line1 == line2){
+            System.out.println("Line 01 And Line 02 Is Equal");
         }
+        else {
+            System.out.println("Line 01 And Line 02 Is Not Equal");
+        }
+    }
 }
-
-
